@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_clima_lt/utilities/constantes.dart';
+import 'package:app_clima_lt/screens/ubicacion_screen.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -36,7 +37,9 @@ class _CityScreenState extends State<CityScreen> {
                 child: null,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, "Hola a todos");
+                },
                 child: Text(
                   'Obtener Clima',
                   style: kButtonTextStyle,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_clima_lt/utilities/constantes.dart';
+import 'package:app_clima_lt/screens/ciudad_screen.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _LocationScreenState extends State<LocationScreen> {
             image: AssetImage('images/location_background.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.8), BlendMode.dstATop),
+                Colors.white.withOpacity(0.), BlendMode.dstATop),
           ),
         ),
         constraints: BoxConstraints.expand(),
@@ -36,7 +37,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CityScreen(),
+                        ),
+                      );
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
